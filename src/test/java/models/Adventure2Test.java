@@ -23,5 +23,22 @@ public class Adventure2Test {
         Adventure2 testAdventure = new Adventure2();
         assertEquals(9, testAdventure.countDown(1,10));
     }
+    @Test
+    public void countDown_subtractTurn_7 () {
+        Adventure2 testAdventure = new Adventure2();
+        assertEquals(7, testAdventure.countDown(3,10));
+    }
+
+    @Test
+    public void endGame_whenLose_loser () {
+        Adventure2 testAdventure = new Adventure2();
+        assertEquals("Out of moves!", testAdventure.endGame(-1));
+    }
+
+    @Test
+    public void endGame_whenWinner_winner () {
+        Adventure2 testAdventure = new Adventure2();
+        assertEquals("You win!", testAdventure.endGame(0));
+    }
 
 }

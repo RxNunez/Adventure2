@@ -1,23 +1,26 @@
 package models;
 
+import java.util.*;
+
+
 /**
  * Created by Guest on 8/3/17.
  */
 public class Adventure2 {
 
     public int timer;
-    private int userInput;
-    private int value;
-    private int newTurnValue;
-    private int turnLeft;
+    public int userInput;
+    public int value;
+    public int newTurnLeft;
+    public int turnLeft;
 
     public int getUserInput(int userInput) {
 
      switch(userInput) {
-         case 1: value = 1;
+         case 1: value =  1;
                  System.out.println(value);
                  break;
-         case 2: value = 2;
+         case 2: value =  2;
                  System.out.println(value);
                  break;
          default:
@@ -27,10 +30,23 @@ public class Adventure2 {
     }
 
     public int countDown(int value, int turnLeft) {
-        newTurnValue = turnLeft-value;
-        return newTurnValue;
+        newTurnLeft = turnLeft - value;
+        return newTurnLeft;
     }
 
-    public
+    public String endGame(int countDownValue) {
+        if (countDownValue < 0) {
+            String loser = "Out of moves!";
+//            System.out.println(loser + " " + countDownValue);
+            return loser;
+        } else {
+            String winner = "You win!";
+//            System.out.println(winner + " " + countDownValue);
+            return winner;
+        }
+    }
+
+//    public int getPlayerChoice(int choice) {
+//    }
 
 }
