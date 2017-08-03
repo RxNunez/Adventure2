@@ -8,8 +8,8 @@ public class Adventure2 {
     public int timer;
     private int userInput;
     private int value;
-    private int newTimerValue;
-    private int timerValue;
+    private int newTurnValue;
+    private int turnLeft;
 
     public int getUserInput(int userInput) {
 
@@ -24,5 +24,11 @@ public class Adventure2 {
              System.out.println("1 or 2 are your only options! TRY AGAIN ");
      }
      return value;
+    }
+
+    public int countDown(int value, int turnLeft) {
+        newTurnValue = turnLeft-value;
+        return newTurnValue;
+
     }
 }
