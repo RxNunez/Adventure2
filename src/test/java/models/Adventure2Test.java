@@ -18,5 +18,10 @@ public class Adventure2Test {
         Adventure2 testAdventure = new Adventure2();
         assertEquals(2, testAdventure.getUserInput(2));
     }
+    @Test
+    public void countDown_subtractTurn_9 () {
+        Adventure2 testAdventure = new Adventure2();
+        assertEquals(9, testAdventure.countDown(1,10));
+    }
 
 }

@@ -29,6 +29,8 @@ public class Adventure2 {
     public int countDown(int value, int turnLeft) {
         newTurnValue = turnLeft-value;
         return newTurnValue;
-
     }
+
+    public
+
 }
